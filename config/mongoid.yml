@@ -1,0 +1,7 @@
+development:
+    clients:
+        default:
+            uri: "mongodb+srv://guiddiel:<password>@dielproject.qmjdut5.mongodb.net/?retryWrites=true&w=majority&appName=dielProject"
+            options:
+                server_api:
+                    version: "1"
