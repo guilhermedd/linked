@@ -27,3 +27,6 @@ Things you may want to cover:
 You have to install mongo
 
 # linked
+
+Linked is an app made to save links in a website that can be accessed effortlessly
+Check mongo status before starting application at: `https://cloud.mongodb.com/v2/665f50141c4f827d1ebb73a8#/overview`
