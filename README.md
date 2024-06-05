@@ -30,4 +30,4 @@ You have to install mongo
 
 Linked is an app made to save links in a website that can be accessed effortlessly
 Check mongo status before starting application at: `https://cloud.mongodb.com/v2/665f50141c4f827d1ebb73a8#/overview`
-Change /config/mongoid.yml to your configuration
+Change /config/mongoid.yml to your configuration# linked
