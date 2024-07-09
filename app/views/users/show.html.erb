@@ -2,12 +2,6 @@
 
 <%= render @user %>
 
-<h2>Link items for this user:</h2>
-
-<% @links.each do |link| %>
-  <%= render link %>
-<% end %>
-
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>

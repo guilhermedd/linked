@@ -1,12 +1,37 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
 
-<h1>Users</h1>
-
-<div id="users">
-  <%= render current_user %>
-  <p>
-    <%= link_to "Show this user", current_user %>
-  </p>
+<div class="row d-flex justify-content-center mt-3">
+  <div class="col text-center">
+    <h1>My links</h1>
+  </div>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<div class="row d-flex justify-content-center">
+  <% @links.each_slice(2) do |link_slice| %>
+    <div class="row mt-5">
+      <% link_slice.each do |link_item| %>
+        <%= render link_item%>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
+
+<div id="users" class="row d-flex justify-content-center mt-3">
+  <div class="col">
+    <p>
+      <%= link_to "Show current user", current_user %>
+    </p>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center mt-3">
+  <div class="col">
+    <%= link_to "New user", new_user_path %>
+  </div>
+</div>

@@ -3,11 +3,12 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    @user = current_user
+    @links = current_user.link_items
   end
 
   # GET /users/1 or /users/1.json
   def show
-    @links = current_user.link_items
   end
 
   # GET /users/new
