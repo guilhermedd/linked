@@ -21,7 +21,8 @@ class LinkItemsController < ApplicationController
 
   # POST /link_items or /link_items.json
   def create
-    @link_item = LinkItem.new(link_item_params)
+    # @link_item = LinkItem.new(link_item_params)
+    @link_item = current_user.link_items.build(link_item_params)
 
     respond_to do |format|
       if @link_item.save

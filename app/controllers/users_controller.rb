@@ -3,11 +3,11 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
   end
 
   # GET /users/1 or /users/1.json
   def show
+    @links = current_user.link_items
   end
 
   # GET /users/new
@@ -65,6 +65,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :bio, :picture, :banner)
+      params.require(:user).permit(:name, :bio, :picture, :banner, :username)
     end
 end
