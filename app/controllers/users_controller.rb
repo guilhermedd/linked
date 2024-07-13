@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def index
     @user = current_user
     @links = current_user.link_items
+    @new_link = LinkItem.new
   end
 
   # GET /users/1 or /users/1.json

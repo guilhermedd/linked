@@ -1,14 +1,11 @@
-<% if notice %>
-  <div class="alert alert-success" role="alert">
-    <%= notice %>
-  </div>
-<% end %>
-
-<div class="row d-flex justify-content-center mt-3">
+<div class="row d-flex justify-content-center mt-5">
   <div class="col text-center">
-    <h1>My links</h1>
+    <h1>Welcome to Linked, <%= current_user.name %>!</h1>
+    <h3 class="mt-5">These are your saved links:</h3>
   </div>
 </div>
+
+<%= render partial: 'link_items/form', locals: {link_item: @new_link}%>
 
 <div class="row d-flex justify-content-center">
   <% @links.each_slice(2) do |link_slice| %>
